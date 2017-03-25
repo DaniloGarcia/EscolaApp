@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EscolaApp</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="entrar">Entrar</string>
+    <string name="quem_e_voce">Quem é você?</string>
+    <string name="selecione_pai_filho_local">Selecione uma das opções abaixo:</string>
+    <string name="Papai_ou_mamae">Papai ou mamãe</string>
+    <string name="Filho_a">Filho(a)</string>
+    <string name="local">Local</string>
+</resources>
