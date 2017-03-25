@@ -7,4 +7,12 @@
     <string name="Papai_ou_mamae">Papai ou mamãe</string>
     <string name="Filho_a">Filho(a)</string>
     <string name="local">Local</string>
+    <string name="criar">Criar</string>
+    <string name="criar_conta_title">Criar Conta</string>
+    <string name="email">E-mail</string>
+    <string name="nome">Nome</string>
+    <string name="senha">Senha</string>
+    <string name="senha_repetir">Repetir a senha</string>
+    <string name="login_title">Login</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
 </resources>

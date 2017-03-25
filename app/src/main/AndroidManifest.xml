@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activitys.MainActivity"
             android:theme="@style/AppTheme.ActivitySemBarra">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CriarConta"></activity>
+        <activity
+            android:name=".activitys.CriarContaActivity"
+            android:label="@string/criar_conta_title"></activity>
+        <activity
+            android:name=".activitys.LoginActivity"
+            android:label="@string/login_title">
+        </activity>
     </application>
 
 </manifest>
