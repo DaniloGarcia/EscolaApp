@@ -19,11 +19,14 @@
         </activity>
         <activity
             android:name=".activitys.CriarContaActivity"
-            android:label="@string/criar_conta_title"></activity>
+            android:label="@string/criar_conta_title" />
         <activity
             android:name=".activitys.LoginActivity"
-            android:label="@string/login_title">
-        </activity>
+            android:label="@string/login_title" />
+        <activity
+            android:name=".activitys.AlunosActivity"
+            android:label="@string/alunos_title"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
