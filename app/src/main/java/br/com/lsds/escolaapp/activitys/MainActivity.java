@@ -60,18 +60,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        radOpc_main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int selectedId = radOpc_main.getCheckedRadioButtonId();
-                radButton = (RadioButton) findViewById(selectedId);
-                if(radButton.getText() != "radio_pai" ){
-                    btnCriarConta.setVisibility(0);
-                }else{
-                    btnCriarConta.setVisibility(0);
-                }
-            }
-        });
     }
 }
