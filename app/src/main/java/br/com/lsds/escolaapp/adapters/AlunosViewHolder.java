@@ -20,7 +20,7 @@ public class AlunosViewHolder extends ChildViewHolder {
     public AlunosViewHolder(View itemView) {
         super(itemView);
 
-        txAluno = (TextView) itemView.findViewById(R.id.tx_aluno);
+        txAluno = (TextView) itemView.findViewById(R.id.tx_nome_aluno);
     }
 
     public void onBind(Alunos Alunos, ExpandableGroup group) {
