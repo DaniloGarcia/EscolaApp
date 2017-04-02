@@ -1,9 +1,8 @@
 package br.com.lsds.escolaapp.activitys;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,10 +12,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 import br.com.lsds.escolaapp.R;
+import br.com.lsds.escolaapp.adapters.AlunosGroup;
+import br.com.lsds.escolaapp.adapters.AlunosAdapter;
+import br.com.lsds.escolaapp.models.Alunos;
 
 public class AlunosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private RecyclerView recyclerView;
+    private ArrayList<AlunosGroup> mobileOSes;
+    private AlunosAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,17 @@ public class AlunosActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /* Adapter */
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mobileOSes = new ArrayList<>();
+
+        setData();
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapter = new AlunosAdapter(this, mobileOSes);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -90,5 +109,22 @@ public class AlunosActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void setData() {
+        ArrayList<Alunos> escola01 = new ArrayList<>();
+        escola01.add(new Alunos("Luiz Felipe"));
+        escola01.add(new Alunos("Laura Monique"));
+
+        ArrayList<Alunos> escola02 = new ArrayList<>();
+        escola02.add(new Alunos("Marta Cristina"));
+        escola02.add(new Alunos("Matheus Luiz"));
+
+        ArrayList<Alunos> ingles01 = new ArrayList<>();
+        ingles01.add(new Alunos("João da Silva"));
+
+        mobileOSes.add(new AlunosGroup("Escola 01", escola01));
+        mobileOSes.add(new AlunosGroup("Escola 02", escola02));
+        mobileOSes.add(new AlunosGroup("Inglês 01", ingles01));
     }
 }

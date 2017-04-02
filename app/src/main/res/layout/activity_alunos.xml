@@ -11,7 +11,7 @@
     <include
         layout="@layout/app_bar_alunos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -22,5 +22,6 @@
         app:headerLayout="@layout/nav_header_alunos"
         app:menu="@menu/activity_alunos_drawer" />
 
-
 </android.support.v4.widget.DrawerLayout>
+
+
