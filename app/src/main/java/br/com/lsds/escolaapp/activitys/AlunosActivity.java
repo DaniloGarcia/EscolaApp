@@ -1,6 +1,9 @@
 package br.com.lsds.escolaapp.activitys;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.NavigationView;
@@ -11,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -25,6 +29,8 @@ public class AlunosActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private ArrayList<AlunosGroup> mobileOSes;
     private AlunosAdapter adapter;
+    private FloatingActionButton fabIncLocal;
+    Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class AlunosActivity extends AppCompatActivity
         setContentView(R.layout.activity_alunos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        activity = this;
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +59,15 @@ public class AlunosActivity extends AppCompatActivity
 
         adapter = new AlunosAdapter(this, mobileOSes);
         recyclerView.setAdapter(adapter);
+
+        fabIncLocal = (FloatingActionButton) findViewById(R.id.fab_inc_local);
+        fabIncLocal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, IncLocalActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

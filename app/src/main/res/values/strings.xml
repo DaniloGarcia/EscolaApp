@@ -17,6 +17,22 @@
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
     <string name="alunos_title">Alunos</string>
 
+    <!--Tela de inclusão de locais: Leyout: activity_inc_local Java: -->
+    <string name="atv_inc_local">Novo local</string>
+    <string name="tv_encontre_local">1º Encontre o local</string>
+    <string name="tv_confirme_local">2º Confirme as informações do local escolhido</string>
+    <string name="tv_info_email_local">3º Informe seu email cadastrado no local</string>
+    <string name="hint_et_email_local">marcos@gmail.com</string>
+    <string name="tv_info_doc_local">4º Informe seu CPF o local</string>
+    <string name="hint_et_doc_local">01687954870</string>
+    <string name="bt_solicita_token">Solicitar Token</string>
+
+    <string name="tv_info_token">5º Informe o token fornecido pelo local</string>
+    <string name="hint_et_info_token">FGRSH01</string>
+    <string name="bt_incluir_local">Incluir</string>
+    <!-- =================================================================== -->
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
