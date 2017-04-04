@@ -64,7 +64,7 @@ public class AlunosActivity extends AppCompatActivity
         fabIncLocal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, IncLocalActivity.class);
+                Intent intent = new Intent(activity, PesqLocalActivity.class);
                 startActivity(intent);
             }
         });

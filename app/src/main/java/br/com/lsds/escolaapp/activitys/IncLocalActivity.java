@@ -1,11 +1,10 @@
 package br.com.lsds.escolaapp.activitys;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import br.com.lsds.escolaapp.R;
+import br.com.lsds.escolaapp.util.ActivityHomeAsUpEnabled;
 
-public class IncLocalActivity extends AppCompatActivity {
+public class IncLocalActivity extends ActivityHomeAsUpEnabled {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
