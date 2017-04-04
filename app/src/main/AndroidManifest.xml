@@ -27,9 +27,12 @@
             android:name=".activitys.AlunosActivity"
             android:label="@string/alunos_title"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activitys.IncLocalActivity"
-            android:label="@string/atv_inc_local"/>
-
+        <activity
+            android:name=".activitys.IncLocalActivity"
+            android:label="@string/atv_inc_local" />
+        <activity android:name=".activitys.AlunosChamados"
+            android:label="@string/alunos_chamados_title"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

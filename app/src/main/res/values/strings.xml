@@ -38,4 +38,5 @@
 
     <string name="action_settings">Settings</string>
     <string name="chamar">Chamar</string>
+    <string name="alunos_chamados_title">Chamada Alunos</string>
 </resources>
