@@ -1,29 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
-    android:background="@color/color_group"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="1dp"
+    app:cardBackgroundColor="@color/color_subgroup">
 
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:id="@+id/img_local"
-        android:src="@drawable/ic_school_black_24dp"
-        android:layout_centerVertical="true"/>
-
-    <TextView
-        android:id="@+id/tx_nome_aluno"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawablePadding="5dp"
-        android:gravity="left|center"
-        android:textColor="@android:color/black"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/img_local"
-        android:layout_marginLeft="10dp"
-        android:maxLines="1"
-        android:text="@string/local"/>
+        android:layout_margin="5dp">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tx_solicitacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="0001 - 15/06/2017 12:00"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tx_cod_aluno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="26435168435"
+            android:maxLines="1"
+            android:layout_alignParentRight="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tx_solicitacao"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_aluno"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img_aluno">
+
+                <TextView
+                    android:id="@+id/tx_nome_aluno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="João Pedro"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/tx_serie_aluno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="08º B"
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/tx_nome_aluno"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true">
+
+                    <Button
+                        android:id="@+id/btn_entregue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Entregue"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawableLeft="@drawable/ic_check_circle_white_24dp"
+                        android:textColor="@color/white"/>
+
+                    <Button
+                        android:id="@+id/btn_solicitar"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text=""
+                        android:drawableRight="@drawable/ic_account_circle_white_24dp"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</android.support.v7.widget.CardView>
