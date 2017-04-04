@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int opcao = radOpc_main.getCheckedRadioButtonId();
                 Intent intent = new Intent(activity, LoginActivity.class);
+                intent.putExtra("TIPO", opcao);
                 startActivity(intent);
             }
         });
