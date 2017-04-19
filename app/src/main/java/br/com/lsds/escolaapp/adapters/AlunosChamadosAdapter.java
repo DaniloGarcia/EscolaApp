@@ -38,6 +38,8 @@ public class AlunosChamadosAdapter extends RecyclerView.Adapter<AlunosChamadosAd
     public void onBindViewHolder(AlunosChamadosAdapter.AlunosViewHolder holder, int position) {
         Alunos aluno = alunos.get(position);
         holder.txtAluno.setText(aluno.getName());
+
+
     }
 
     @Override
