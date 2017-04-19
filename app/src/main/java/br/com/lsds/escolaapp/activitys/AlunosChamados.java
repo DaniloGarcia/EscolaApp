@@ -1,5 +1,6 @@
 package br.com.lsds.escolaapp.activitys;
 
+import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -11,8 +12,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,14 +24,17 @@ import br.com.lsds.escolaapp.adapters.AlunosAdapter;
 import br.com.lsds.escolaapp.adapters.AlunosChamadosAdapter;
 import br.com.lsds.escolaapp.models.Alunos;
 
-public class AlunosChamados extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class AlunosChamados extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AlunosChamadosAdapter.ListItemClickListener {
 
     private RecyclerView          recyclerView;
     private AlunosChamadosAdapter adapter;
+    public Activity activity;
+    ArrayList<Alunos>             alunos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.activity = this;
         setContentView(R.layout.activity_alunos_chamados);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,7 +54,6 @@ public class AlunosChamados extends AppCompatActivity implements NavigationView.
         //Lista de alunos
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        ArrayList<Alunos> alunos = new ArrayList<>();
         alunos.add(new Alunos("Luiz Felipe"));
         alunos.add(new Alunos("Laura Monique"));
         alunos.add(new Alunos("Marta Cristina"));
@@ -58,11 +63,10 @@ public class AlunosChamados extends AppCompatActivity implements NavigationView.
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new AlunosChamadosAdapter(this, alunos);
+        adapter = new AlunosChamadosAdapter(this, alunos, this);
         recyclerView.setAdapter(adapter);
 
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -89,4 +93,8 @@ public class AlunosChamados extends AppCompatActivity implements NavigationView.
         return true;
     }
 
+    @Override
+    public void onListItemClick(int clickedItemIndex) {
+        Toast.makeText(activity,"Clicou em: " + alunos.get(clickedItemIndex).getName().toString(),Toast.LENGTH_SHORT).show();
+    }
 }
