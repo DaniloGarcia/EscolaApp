@@ -26,5 +26,4 @@ public class AlunosViewHolder extends ChildViewHolder {
     public void onBind(Alunos Alunos, ExpandableGroup group) {
         txAluno.setText(Alunos.getName());
     }
-
 }

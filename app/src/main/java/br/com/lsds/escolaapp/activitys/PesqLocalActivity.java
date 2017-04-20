@@ -17,13 +17,12 @@ import br.com.lsds.escolaapp.util.ActivityHomeAsUpEnabled;
 public class PesqLocalActivity extends ActivityHomeAsUpEnabled {
 
     ArrayAdapter<String> adapter;
-    ListView lv_locais;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesq_local);
-        lv_locais = (ListView) findViewById(R.id.lv_locais);
+        ListView lv_locais = (ListView) findViewById(R.id.lv_locais);
         ArrayList<String> arrayLocais = new ArrayList<>();
         arrayLocais.addAll(Arrays.asList(getResources().getStringArray(R.array.array_locais)));
 
@@ -51,6 +50,8 @@ public class PesqLocalActivity extends ActivityHomeAsUpEnabled {
                 return false;
             }
         });
+
+
 
         return super.onCreateOptionsMenu(menu);
     }
